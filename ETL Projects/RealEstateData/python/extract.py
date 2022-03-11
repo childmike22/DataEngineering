@@ -41,3 +41,9 @@ os.makedirs(os.path.dirname(data_dir), exist_ok=True)
 with ZipFile(source_path, 'r') as zip:
     filenames = zip.namelist()
     result = zip.extract(filenames[0], data_dir)
+    
+    
+def extract_data():
+    df = pd.read_csv('[YOUR_PROJECT_PATH]/data/source/downloaded_at=2022-03-01/ppr-all.zip',
+                     encoding='unicode_escape')
+    return df
