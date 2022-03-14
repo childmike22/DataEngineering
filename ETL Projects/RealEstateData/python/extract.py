@@ -23,6 +23,7 @@ def create_directory_if_not_exists(path):
 def download_snapshot():
     """
     Download the desired CSV from the Zip file to a specific folder
+    Accessible if we want to look back / audit historical zip files
     """
     create_directory_if_not_exists(source_path)
     # Open the .zip file in binary mode
