@@ -2,7 +2,7 @@
 
 [ETL in Python Course](https://campus.datacamp.com/courses/etl-in-python/explore-the-data-and-requirements?ex=1 "DataCamp Course")
 
-### 1) Extract
+### [1) Extract] (https://github.com/childmike22/DataEngineering/blob/main/ETL%20Projects/RealEstateData/python/extract.py)
   - The extract job pulls data from a URL that automatically downloads a zipfile
   - Accessible for historical audits / and we have access to the original zip file
 
