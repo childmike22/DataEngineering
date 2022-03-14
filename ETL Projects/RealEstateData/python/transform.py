@@ -25,7 +25,7 @@ def fill_na_values(df):
 
 
 def convert_dates_to_correct_formats(df):
-    df['Date_of_Sale_(mm/dd/yyyy)'] = pd.to_datetime(df['Date of Sale (dd/mm/yyyy)'], format='%d/%m/%Y').dt.strftime('%m-%d-%Y')
+    df['Date_of_Sale'] = pd.to_datetime(df['Date of Sale (dd/mm/yyyy)'], format='%d/%m/%Y')
     return df
 
 # TODO 1B: Clean the data - convert our price column to a float
@@ -36,6 +36,8 @@ def convert_price_to_int(df):
     df['Price ()'] = df['Price ()'].str.replace(',', '')
     df['Price ()'] = df['Price ()'].astype(float)
     df['Price ()'] = df['Price ()'].astype(int)
+    df['Address'] = df['Address'].str.replace("'", "`")
+    # df['Address'] = df['Address'].str.replace(',', '_')
     return df
 
 
